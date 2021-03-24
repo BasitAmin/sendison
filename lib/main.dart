@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/Home.dart';
 
-
-void main() {
+void main(){
   runApp(GetMaterialApp(
-    title: "Sendison",
+    title: "SendiSon",
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-        fontFamily: "NoirPro"
-    ),
+    home: Home(),
   ));
 }
 
