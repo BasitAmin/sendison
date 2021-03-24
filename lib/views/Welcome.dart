@@ -11,6 +11,7 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         width: Get.width,
         height: Get.height,
@@ -32,34 +33,33 @@ class _WelcomeState extends State<Welcome> {
                     border: Border.all(width: 4,color: Color(0xff01AFF7)),
                   ),
                   child: CircleAvatar(
-                    radius: 70.0,
+                    radius: 80.0,
                     backgroundImage:
                     NetworkImage('https://via.placeholder.com/150'),
                     backgroundColor: Colors.transparent,
                   ),
                 ),
                 Positioned(
-                  top: 120,
-                  left: 30,
+                  top: 130,
+                  left: 20,
                   bottom: 0,
                   child: MaterialButton(
-                    minWidth: 70,
+                    minWidth: Get.width/3,
                     onPressed: (){
                       Get.to(Welcome());
                     },
                     color: Color(0xff6830F7),
-                    height: 25,
+                    height: 20,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(6) ),
                     child: Text('Choose',style: TextStyle(
-                        fontSize: 18,fontWeight: FontWeight.bold,
-                        color: Colors.white),),
+                        fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
                   ),
                 ),
               ],
             ),
             Container(
-              width: Get.width/1.5,
+              width: Get.width/1.8,
               child: TextFormField(
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(10),
@@ -68,7 +68,7 @@ class _WelcomeState extends State<Welcome> {
                   hintStyle: TextStyle(
                     color: Colors.grey.withOpacity(0.5),
                     fontSize: 35,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                   ),
                   enabledBorder: InputBorder.none,
                 ),
@@ -83,14 +83,14 @@ class _WelcomeState extends State<Welcome> {
                   hintText: '+11 12 13 14 15',
                   hintStyle: TextStyle(
                     color: Colors.grey.withOpacity(0.5),
-                    fontSize: 18,
+                    fontSize: 24,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
             ),
             MaterialButton(
-              minWidth: Get.width/1.5,
+              minWidth: Get.width/1.8,
               onPressed: (){
                 Get.to(SmsCode());
               },
@@ -99,7 +99,7 @@ class _WelcomeState extends State<Welcome> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6) ),
               child: Text('Save',style: TextStyle(
-                  fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),),
+                  fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
             ),
 
           ],

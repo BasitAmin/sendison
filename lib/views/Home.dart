@@ -12,6 +12,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         width: Get.width,
         height: Get.height,
@@ -25,9 +26,9 @@ class _HomeState extends State<Home> {
             ),
             Container(
               child: CircleAvatar(
-                radius: 60.0,
+                radius: 80.0,
                 backgroundImage:
-                NetworkImage('https://via.placeholder.com/150'),
+                NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
                 backgroundColor: Colors.transparent,
               ),
             ),
@@ -35,8 +36,9 @@ class _HomeState extends State<Home> {
               child: Text('Privacy Is The One And \n Only Focus We Have!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
-              fontWeight: FontWeight.bold),),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w600
+              ),),
             ),
             MaterialButton(
               minWidth: Get.width/1.5,
@@ -48,7 +50,7 @@ class _HomeState extends State<Home> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6) ),
               child: Text('Get Satrted',style: TextStyle(
-                  fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),),
+                  fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
             ),
           ],
         ),

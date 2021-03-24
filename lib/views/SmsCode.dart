@@ -12,6 +12,7 @@ class _SmsCodeState extends State<SmsCode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         width: Get.width,
         height: Get.height,
@@ -21,7 +22,7 @@ class _SmsCodeState extends State<SmsCode> {
           children: [
             Container(
               child: Text('SMS Code',style: TextStyle(
-                fontSize: 50,fontWeight: FontWeight.bold),),
+                fontSize: 50,fontWeight: FontWeight.w600),),
             ),
             SizedBox(height: 25,),
             Container(
@@ -29,7 +30,7 @@ class _SmsCodeState extends State<SmsCode> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 30,
-                    fontWeight: FontWeight.bold),),
+                    fontWeight: FontWeight.w600),),
             ),
             SizedBox(height: 50,),
             Container(
@@ -41,14 +42,14 @@ class _SmsCodeState extends State<SmsCode> {
                   hintStyle: TextStyle(
                     color: Colors.grey.withOpacity(0.5),
                     fontSize: 40,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
             ),
             SizedBox(height: 100,),
             MaterialButton(
-              minWidth: Get.width/1.5,
+              minWidth: Get.width/1.8,
               onPressed: (){
                 Get.to(Contacts());
               },
@@ -57,7 +58,7 @@ class _SmsCodeState extends State<SmsCode> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6) ),
               child: Text('Confirm',style: TextStyle(
-                  fontSize: 18,color: Colors.white),),
+                  fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
             ),
           ],
         ),

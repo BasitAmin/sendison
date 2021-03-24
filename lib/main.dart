@@ -6,6 +6,10 @@ void main(){
   runApp(GetMaterialApp(
     title: "SendiSon",
     debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      backgroundColor: Colors.white,
+      fontFamily: "NoirPro"
+    ),
     home: Home(),
   ));
 }

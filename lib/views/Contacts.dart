@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/Calls.dart';
+import 'package:sendison/views/Inbox.dart';
+import 'package:sendison/views/Settings.dart';
 
 class Contacts extends StatefulWidget {
   @override
@@ -10,6 +13,7 @@ class _ContactsState extends State<Contacts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         width: Get.width,
         height: Get.height,
@@ -19,7 +23,7 @@ class _ContactsState extends State<Contacts> {
           children: [
             Container(
               child: Text('Contacts',style: TextStyle(
-                  fontSize: 50,fontWeight: FontWeight.bold),),
+                  fontSize: 50,fontWeight: FontWeight.w600),),
             ),
             SizedBox(height: 30,),
             Container(
@@ -30,20 +34,20 @@ class _ContactsState extends State<Contacts> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 25,
-                    fontWeight: FontWeight.bold),),
+                    fontWeight: FontWeight.w600),),
             ),
             SizedBox(height: 70,),
             MaterialButton(
-              minWidth: Get.width/1.5,
+              minWidth: Get.width/1.8,
               onPressed: (){
-                //Get.to(Welcome());
+                Get.to(Inbox());
               },
               color: Color(0xff0FBE6C),
               height: 45,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6) ),
               child: Text('Import',style: TextStyle(
-                  fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),),
+                  fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
             ),
 
             FlatButton(
