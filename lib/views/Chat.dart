@@ -141,9 +141,12 @@ class _ChatState extends State<Chat> {
           ],
         ),
         bottomOpacity: 10,
-        leading: Container(
-          //width: 30,
-            child: Icon(Icons.arrow_back_ios_outlined,color: Colors.black,)),
+        leading: InkWell(
+          onTap: (){
+            Get.back();
+          },
+            child: Icon(
+              Icons.arrow_back_ios_outlined,color: Colors.black,)),
         actions: [
           Icon(
             Icons.phone,

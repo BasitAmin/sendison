@@ -18,10 +18,15 @@ class _NewChatState extends State<NewChat> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         actions: [
-          Icon(
-            Icons.close,
-            color: Colors.black,
-            size: 25,
+          InkWell(
+            onTap: (){
+              Get.back();
+            },
+            child: Icon(
+              Icons.close,
+              color: Colors.black,
+              size: 25,
+            ),
           )
         ],
 

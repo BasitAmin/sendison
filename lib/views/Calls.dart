@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/NewCall.dart';
 class Calls extends StatefulWidget {
   @override
   _CallsState createState() => _CallsState();
@@ -17,10 +18,15 @@ class _CallsState extends State<Calls> {
         bottomOpacity: 10,
         automaticallyImplyLeading: false,
         actions: [
-          Icon(
-            Icons.add,
-            color: Colors.black,
-            size: 35,
+          InkWell(
+            onTap: (){
+              Get.to(NewCall());
+            },
+            child: Icon(
+              Icons.add,
+              color: Colors.black,
+              size: 35,
+            ),
           )
         ],
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/Chat.dart';
 import 'package:sendison/views/NewChat.dart';
 class Inbox extends StatefulWidget {
   @override
@@ -79,6 +80,9 @@ class _InboxState extends State<Inbox> {
                 scrollDirection: Axis.vertical,
                 children: [
                   ListTile(
+                    onTap: (){
+                     Get.to(Chat());
+                    },
                     leading: Stack(
                       children: [
                         Container(

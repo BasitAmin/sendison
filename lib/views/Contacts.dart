@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/BottomNavBar.dart';
 import 'package:sendison/views/Calls.dart';
 import 'package:sendison/views/Group.dart';
 import 'package:sendison/views/Inbox.dart';
@@ -41,7 +42,7 @@ class _ContactsState extends State<Contacts> {
             MaterialButton(
               minWidth: Get.width/1.8,
               onPressed: (){
-                Get.to(Group());
+                Get.to(BottomNavBar());
               },
               color: Color(0xff0FBE6C),
               height: 45,
