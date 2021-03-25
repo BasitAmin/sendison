@@ -89,7 +89,7 @@ class _InboxState extends State<Inbox> {
                           child: CircleAvatar(
                             radius: 25.0,
                             backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                            NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                             backgroundColor: Colors.transparent,
                           ),
                         ),
@@ -107,7 +107,7 @@ class _InboxState extends State<Inbox> {
                         ),
                       ],
                     ),
-                    title: Text("Leah Gotti",style: TextStyle(
+                    title: Text("Naah Ruehli",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                     ),),
@@ -142,11 +142,11 @@ class _InboxState extends State<Inbox> {
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
-                    title: Text("Leah Gotti",style: TextStyle(
+                    title: Text("Naah Ruehli",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                     ),),
@@ -177,11 +177,11 @@ class _InboxState extends State<Inbox> {
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
-                    title: Text("Leah Gotti",style: TextStyle(
+                    title: Text("Naah Ruehli",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                     ),),
@@ -212,11 +212,11 @@ class _InboxState extends State<Inbox> {
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
-                    title: Text("Leah Gotti",style: TextStyle(
+                    title: Text("Naah Ruehli",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                     ),),
@@ -247,11 +247,11 @@ class _InboxState extends State<Inbox> {
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
-                    title: Text("Leah Gotti",style: TextStyle(
+                    title: Text("Naah Ruehli",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                     ),),
@@ -283,11 +283,11 @@ class _InboxState extends State<Inbox> {
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
-                    title: Text("Leah Gotti",style: TextStyle(
+                    title: Text("Naah Ruehli",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                     ),),
@@ -321,7 +321,7 @@ class _InboxState extends State<Inbox> {
                           child: CircleAvatar(
                             radius: 25.0,
                             backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                            NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                             backgroundColor: Colors.transparent,
                           ),
                         ),
@@ -339,7 +339,7 @@ class _InboxState extends State<Inbox> {
                         ),
                       ],
                     ),
-                    title: Text("Leah Gotti",style: TextStyle(
+                    title: Text("Naah Ruehli",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                     ),),

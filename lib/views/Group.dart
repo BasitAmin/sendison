@@ -55,7 +55,7 @@ class _GroupState extends State<Group> {
                     child: CircleAvatar(
                       radius: 80.0,
                       backgroundImage:
-                          NetworkImage('https://via.placeholder.com/150'),
+                          NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                       backgroundColor: Colors.transparent,
                     ),
                   ),
@@ -107,7 +107,7 @@ class _GroupState extends State<Group> {
               MaterialButton(
                 minWidth: Get.width / 1.8,
                 onPressed: () {
-                  Get.to(NewCall());
+                  Get.to(Chat());
                 },
                 color: Color(0xff0FBE6C),
                 height: 45,

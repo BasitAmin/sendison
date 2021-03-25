@@ -36,7 +36,7 @@ class _WelcomeState extends State<Welcome> {
                     child: CircleAvatar(
                       radius: 80.0,
                       backgroundImage:
-                      NetworkImage('https://via.placeholder.com/150'),
+                      NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                       backgroundColor: Colors.transparent,
                     ),
                   ),
@@ -102,7 +102,6 @@ class _WelcomeState extends State<Welcome> {
                 child: Text('Save',style: TextStyle(
                     fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
               ),
-
             ],
           ),
         ),

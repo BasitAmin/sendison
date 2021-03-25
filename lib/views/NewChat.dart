@@ -1,21 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/Group.dart';
 class NewChat extends StatefulWidget {
   @override
   _NewChatState createState() => _NewChatState();
 }
 
 class _NewChatState extends State<NewChat> {
+  bool groupChat = false;
+  bool callDialog = false;
+  bool showBtn =false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("New Chat",style: TextStyle(
+        title: Text("NEW CHAT",style: TextStyle(
             fontSize: 28,fontWeight: FontWeight.w600,color: Colors.black),
         ),
         bottomOpacity: 10,
         automaticallyImplyLeading: false,
+        leading: InkWell(
+          onTap: ()
+          {
+            groupChat = !groupChat;
+            showBtn = false;
+            setState(() {
+
+            });
+          },
+          child: Icon(
+            Icons.people,
+            color: groupChat? Colors.black:Colors.grey,
+            size: 25,
+          ),
+        ),
         centerTitle: true,
         actions: [
           InkWell(
@@ -29,18 +49,16 @@ class _NewChatState extends State<NewChat> {
             ),
           )
         ],
-
       ),
       body: Container(
         height: Get.height,
         width: Get.width,
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(20),
         child: Column(
           children: [
             Container(
               height: 35,
               child: TextFormField(
-
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(top: 5),
                   isDense: true,
@@ -72,262 +90,103 @@ class _NewChatState extends State<NewChat> {
                 ),
               ),
             ),
+            SizedBox(height: 15,),
             Expanded(
-              child: ListView(
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                children: [
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
-                            backgroundColor: Colors.transparent,
+                child: Stack(
+                  children: [
+                    ListView.separated(
+                        itemCount: 15,
+                        separatorBuilder: (context,int index){
+                          return SizedBox(height: 15,);
+                        },
+                        itemBuilder: (context,int index)
+                        {
+                          return Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Stack(
+                                children: [
+                                  Container(
+                                    child: CircleAvatar(
+                                      radius: 18.0,
+                                      backgroundImage:
+                                      NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                                      backgroundColor: Colors.transparent,
+                                    ),
+                                  ),
+                                  Positioned(
+                                    bottom: 0,
+                                    right: 0,
+                                    child: Container(
+                                      width: 10,
+                                      height: 10,
+                                      decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        shape: BoxShape.circle,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(width: 10,),
+                              Text("Naah Ruehli",style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                              ),),
+                              Spacer(),
+                              if(groupChat== false)
+                                Icon(
+                                  Icons.send,
+                                  color: Colors.black,
+                                  size: 25,
+                                )
+                              else
+                                InkWell(
+                                  onTap: ()
+                                  {
+                                    showBtn = !showBtn;
+                                    setState(() {
+
+                                    });
+                                  },
+                                  child: Container(
+                                    width: 20,
+                                    height: 20,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[300],
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                )
+                            ],
+                          );
+                        }),
+                    if(showBtn ==true)
+                      Positioned(
+                        bottom: 25,
+                        left: 15,
+                        child: MaterialButton(
+                          minWidth: Get.width/1.2 ,
+                          onPressed: () {
+                           Get.to(Group());
+                          },
+                          color: Colors.deepPurple,
+                          height: 45,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6)),
+                          child: Text(
+                            'Next',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           ),
                         ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("komal",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://miro.medium.com/max/965/0*vCS7rC85YlmIWaTx.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Noorah",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Noorah",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Noorah",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Noorah",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Noorah",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Noorah",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                  ListTile(
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Noorah",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    trailing: Icon(Icons.send,color: Colors.black,),
-                  ),
-                ],
-              ),
-            )
+                      ),
+                  ],
+                )
+            ),
+
           ],
         ),
       ),

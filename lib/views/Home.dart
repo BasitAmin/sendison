@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
               child: CircleAvatar(
                 radius: 80.0,
                 backgroundImage:
-                NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                 backgroundColor: Colors.transparent,
               ),
             ),

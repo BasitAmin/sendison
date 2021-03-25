@@ -25,6 +25,7 @@ class _NewCallState extends State<NewCall> {
           onTap: ()
           {
             groupCall = !groupCall;
+            showBtn = false;
             setState(() {
 
             });
@@ -109,7 +110,7 @@ class _NewCallState extends State<NewCall> {
                                   child: CircleAvatar(
                                     radius: 18.0,
                                     backgroundImage:
-                                    NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                                    NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                                     backgroundColor: Colors.transparent,
                                   ),
                                 ),
@@ -128,7 +129,7 @@ class _NewCallState extends State<NewCall> {
                               ],
                             ),
                             SizedBox(width: 10,),
-                            Text("Nazeer",style: TextStyle(
+                            Text("Naah Ruehli",style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
                             ),),
@@ -173,6 +174,9 @@ class _NewCallState extends State<NewCall> {
                   if(showBtn ==true)
                   Positioned(
                     bottom: 25,
+                    right: 5,
+                    left: 5,
+
                     child: Column(
                       children: [
                         MaterialButton(

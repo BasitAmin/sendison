@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="basitamin.pk.sendison">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="sendison"
         android:icon="@mipmap/ic_launcher">

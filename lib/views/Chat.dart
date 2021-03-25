@@ -164,7 +164,7 @@ class _ChatState extends State<Chat> {
             child: CircleAvatar(
               radius: 15.0,
               backgroundImage:
-              NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+              NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
               backgroundColor: Colors.transparent,
             ),
           ),
@@ -231,7 +231,7 @@ class _ChatState extends State<Chat> {
                     child: CircleAvatar(
                       radius: 18.0,
                       backgroundImage:
-                      NetworkImage('https://i.pinimg.com/736x/01/d8/96/01d896fc28cafa2c1902203dfb1bc138.jpg'),
+                      NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
                       backgroundColor: Colors.transparent,
                     ),
                   ),
