@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sendison/views/Calls.dart';
+import 'package:sendison/views/Group.dart';
 import 'package:sendison/views/Inbox.dart';
 import 'package:sendison/views/Settings.dart';
 
@@ -40,7 +41,7 @@ class _ContactsState extends State<Contacts> {
             MaterialButton(
               minWidth: Get.width/1.8,
               onPressed: (){
-                Get.to(Inbox());
+                Get.to(Group());
               },
               color: Color(0xff0FBE6C),
               height: 45,
