@@ -11,12 +11,6 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  int selectedIndex;
-  final tabs = [
-    Inbox(),
-    Container(),
-    Container(),
-  ];
 
   @override
   Widget build(BuildContext context) {
