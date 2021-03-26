@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Image.asset('assets/icons/logos/SendisonLogoWordDark.png'),
+            Image.asset('assets/icons/logos/LogoDark.png'),
             Container(
               child: CircleAvatar(
                 radius: 80.0,
