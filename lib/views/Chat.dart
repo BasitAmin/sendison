@@ -57,7 +57,7 @@ class _ChatState extends State<Chat> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.camera_alt,size: 30,),
+                    Image.asset('assets/icons/inside/InsideCamera.png',width: 20,),
                     SizedBox(width: 10,),
                     Text('Camera',style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -68,7 +68,7 @@ class _ChatState extends State<Chat> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.photo,size: 30,),
+                    Image.asset('assets/icons/inside/InsideLibrary.png',width: 20,),
                     SizedBox(width: 10,),
                     Text('Photo & Video Library',style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -79,7 +79,7 @@ class _ChatState extends State<Chat> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.file_copy,size: 30,),
+                    Image.asset('assets/icons/inside/InsideDocument.png',width: 20,),
                     SizedBox(width: 10,),
                     Text('Document',style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -90,7 +90,7 @@ class _ChatState extends State<Chat> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.person,size: 30,),
+                    Image.asset('assets/icons/inside/InsideContact.png',width: 20,),
                     SizedBox(width: 10,),
                     Text('Contact',style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -145,20 +145,12 @@ class _ChatState extends State<Chat> {
           onTap: (){
             Get.back();
           },
-            child: Icon(
-              Icons.arrow_back_ios_outlined,color: Colors.black,)),
+            child: Image.asset('assets/icons/inside/InsideBack.png',
+              width: 10,)),
         actions: [
-          Icon(
-            Icons.phone,
-            color: Colors.black,
-            size: 25,
-          ),
+          Image.asset('assets/icons/inside/InsidePhone.png',width: 20,),
           SizedBox(width: 5,),
-          Icon(
-            Icons.video_call,
-            color: Colors.black,
-            size: 25,
-          ),
+          Image.asset('assets/icons/inside/InsideVideo.png',width: 20,),
           SizedBox(width: 5,),
           Container(
             child: CircleAvatar(
@@ -351,7 +343,7 @@ class _ChatState extends State<Chat> {
                           color: Colors.black,
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(Icons.arrow_upward,color: Colors.white,),),
+                        child: Image.asset('assets/icons/inside/InsideTop.png',width: 20,),),
                     ),
                   ),
                   SizedBox(width: 5,),
@@ -402,7 +394,7 @@ class _ChatState extends State<Chat> {
                         color: Colors.grey.withOpacity(0.3),
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.send,size: 25,color: Colors.white,),),
+                      child: Image.asset('assets/icons/inside/InsideSend.png',width: 20,),),
                   ),
 
                 ],

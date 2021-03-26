@@ -22,8 +22,18 @@ class _WelcomeState extends State<Welcome> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                child: Text('Welcome',style: TextStyle(
-                    fontSize: 50,),),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Welcome',style: TextStyle(
+                        fontSize: 50,),),
+                    SizedBox(width: 20,),
+                    Image.asset('assets/icons/loginandsignup/waving.png',
+                      fit: BoxFit.cover,
+                    width: 50,
+                    height: 50,),
+                  ],
+                ),
               ),
               Stack(
                 children: [

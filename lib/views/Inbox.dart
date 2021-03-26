@@ -23,11 +23,8 @@ class _InboxState extends State<Inbox> {
             onTap: (){
               Get.to(NewChat());
             },
-            child: Icon(
-              Icons.add,
-              color: Colors.black,
-              size: 35,
-            ),
+            child: Image.asset('assets/icons/outside/Chat Screen Click New Chat Icon.png',
+              width: 20,height: 20,),
           )
         ],
 
@@ -81,133 +78,8 @@ class _InboxState extends State<Inbox> {
                 children: [
                   ListTile(
                     onTap: (){
-                     Get.to(Chat());
+                      Get.to(Chat());
                     },
-                    leading: Stack(
-                      children: [
-                        Container(
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage:
-                            NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                            backgroundColor: Colors.transparent,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    title: Text("Naah Ruehli",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    subtitle: Text("hi how are you?",style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600
-                    ),),
-                    trailing: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 14,
-                          height: 14,
-                          decoration: BoxDecoration(
-                            color: Colors.pink,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Text("2",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600),),
-                        ),
-                        Container(
-                          child: Text("12:30"),
-                        ),
-                      ],
-                    ),
-                  ),
-                  ListTile(
-                    leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                    ),
-                    title: Text("Naah Ruehli",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    subtitle: Text("hi how are you?"),
-                    trailing: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 14,
-                          height: 14,
-                          decoration: BoxDecoration(
-                            color: Colors.pink,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Text("2",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600),),
-                        ),
-                        Container(
-                          child: Text("12:30"),
-                        ),
-                      ],
-                    ),
-                  ),ListTile(
-                    leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                    ),
-                    title: Text("Naah Ruehli",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    subtitle: Text("hi how are you?"),
-                    trailing: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 14,
-                          height: 14,
-                          decoration: BoxDecoration(
-                            color: Colors.pink,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Text("2",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600),),
-                        ),
-                        Container(
-                          child: Text("12:30"),
-                        ),
-                      ],
-                    ),
-                  ),ListTile(
                     leading: Container(
                       child: CircleAvatar(
                         radius: 25.0,
@@ -351,9 +223,7 @@ class _InboxState extends State<Inbox> {
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Icon(Icons.call,
-                            size: 18,
-                            color: Colors.pink,)
+                          child: Image.asset('assets/icons/outside/Chat Screen Phone Call Icon.png',width: 20,),
                       ),
                     ],),
                     trailing: Column(

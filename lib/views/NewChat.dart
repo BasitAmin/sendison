@@ -30,11 +30,8 @@ class _NewChatState extends State<NewChat> {
 
             });
           },
-          child: Icon(
-            Icons.people,
-            color: groupChat? Colors.black:Colors.grey,
-            size: 25,
-          ),
+          child: groupChat?Image.asset('assets/icons/newcalls/ClickedGroupBright.png',width: 20,)
+              :Image.asset('assets/icons/newcalls/GroupCallBright.png',width: 20,),
         ),
         centerTitle: true,
         actions: [
@@ -42,11 +39,7 @@ class _NewChatState extends State<NewChat> {
             onTap: (){
               Get.back();
             },
-            child: Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 25,
-            ),
+            child: Image.asset('assets/icons/outside/Clicked New Chat Close Icon.png',width: 20,),
           )
         ],
       ),
@@ -95,7 +88,7 @@ class _NewChatState extends State<NewChat> {
                 child: Stack(
                   children: [
                     ListView.separated(
-                        itemCount: 15,
+                        itemCount: 8,
                         separatorBuilder: (context,int index){
                           return SizedBox(height: 15,);
                         },
@@ -135,11 +128,7 @@ class _NewChatState extends State<NewChat> {
                               ),),
                               Spacer(),
                               if(groupChat== false)
-                                Icon(
-                                  Icons.send,
-                                  color: Colors.black,
-                                  size: 25,
-                                )
+                                Image.asset('assets/icons/outside/Clicked New Chat Send Icon.png',width: 20,)
                               else
                                 InkWell(
                                   onTap: ()

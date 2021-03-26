@@ -22,11 +22,7 @@ class _CallsState extends State<Calls> {
             onTap: (){
               Get.to(NewCall());
             },
-            child: Icon(
-              Icons.add,
-              color: Colors.black,
-              size: 35,
-            ),
+            child: Image.asset('assets/icons/calls/Calls-Screen-New-Call-Icon.png',width: 20,),
           )
         ],
 
@@ -88,68 +84,6 @@ class _CallsState extends State<Calls> {
                       ),
                     ),
                     title: Row(children: [
-                      Text("Naah Ruehli",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                      SizedBox(width: 2,),
-
-                    ],),
-                    subtitle: Row(children: [
-                      Text("1 hour,26 Minutes,23 seconds"),
-                      SizedBox(width: 2,),
-                      Container(
-
-                        child: Icon(Icons.call,
-                        size: 18,
-                        color: Colors.grey,)
-                      ),
-                    ],),
-                    trailing:Container(
-                      padding: EdgeInsets.only(top: 20),
-                        child: Text("12:34",style: TextStyle(color: Colors.grey),)),
-                  ),
-                  ListTile(
-                    leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                    ),
-                    title: Row(children: [
-                      Text("Naah Ruehli",style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                      ),),
-                      SizedBox(width: 2,),
-
-                    ],),
-                    subtitle: Row(children: [
-                      Text("1 hour,26 Minutes,23 seconds"),
-                      SizedBox(width: 2,),
-                      Container(
-
-                          child: Icon(Icons.call,
-                            size: 18,
-                            color: Colors.grey,)
-                      ),
-                    ],),
-                    trailing:Container(
-                        padding: EdgeInsets.only(top: 20),
-                        child: Text("12:34",style: TextStyle(color: Colors.grey),)),
-                  ),
-                  ListTile(
-                    leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                    ),
-                    title: Row(children: [
                       Text("John",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
@@ -178,45 +112,12 @@ class _CallsState extends State<Calls> {
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Icon(Icons.video_call,
-                            size: 18,
-                            color: Colors.pink,)
+                          child: Image.asset('assets/icons/calls/Calls-Screen-Video-Call-Icon.png',width: 20,),
                       ),
                     ],),
                     trailing:Container(
                         padding: EdgeInsets.only(top: 20),
                         child: Text("Sunday",style: TextStyle(color: Colors.grey),)),
-                  ),
-                  ListTile(
-                    leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                    ),
-                    title: Row(children: [
-                      Text("Naah Ruehli",style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                      ),),
-                      SizedBox(width: 2,),
-
-                    ],),
-                    subtitle: Row(children: [
-                      Text("1 hour,26 Minutes,23 seconds"),
-                      SizedBox(width: 2,),
-                      Container(
-
-                          child: Icon(Icons.call,
-                            size: 18,
-                            color: Colors.grey,)
-                      ),
-                    ],),
-                    trailing:Container(
-                        padding: EdgeInsets.only(top: 20),
-                        child: Text("12:34",style: TextStyle(color: Colors.grey),)),
                   ),
                   ListTile(
                     leading: Container(
@@ -256,9 +157,7 @@ class _CallsState extends State<Calls> {
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Icon(Icons.call,
-                            size: 18,
-                            color: Colors.pink,)
+                          child: Image.asset('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png',width: 20,),
                       ),
                     ],),
                     trailing:Container(
@@ -283,97 +182,18 @@ class _CallsState extends State<Calls> {
 
                     ],),
                     subtitle: Row(children: [
-                      Text("1 hour,26 Minutes,23 seconds"),
+                      Text("1 hour,26 Minutes"),
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Icon(Icons.call,
-                            size: 18,
-                            color: Colors.grey,)
+                          child: Image.asset('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png',width: 20,),
                       ),
                     ],),
                     trailing:Container(
                         padding: EdgeInsets.only(top: 20),
                         child: Text("12:34",style: TextStyle(color: Colors.grey),)),
                   ),
-                  ListTile(
-                    leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                    ),
-                    title: Row(children: [
-                      Text("Naah Ruehli",style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                      ),),
-                      SizedBox(width: 2,),
 
-                    ],),
-                    subtitle: Row(children: [
-                      Text("1 hour,26 Minutes,23 seconds"),
-                      SizedBox(width: 2,),
-                      Container(
-
-                          child: Icon(Icons.call,
-                            size: 18,
-                            color: Colors.grey,)
-                      ),
-                    ],),
-                    trailing:Container(
-                        padding: EdgeInsets.only(top: 20),
-                        child: Text("12:34",style: TextStyle(color: Colors.grey),)),
-                  ),
-                  ListTile(
-                    leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                    ),
-                    title: Row(children: [
-                      Text("Nomi",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18,
-                        ),),
-                      SizedBox(width: 2,),
-                      Container(
-                        width: 14,
-                        height: 14,
-                        decoration: BoxDecoration(
-                          color: Colors.pink,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Text("2",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w600),),
-                      ),
-                    ],),
-                    subtitle: Row(children: [
-                      Text("Missed Phone Call",style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
-                      SizedBox(width: 2,),
-                      Container(
-
-                          child: Icon(Icons.call,
-                            size: 18,
-                            color: Colors.pink,)
-                      ),
-                    ],),
-                    trailing:Container(
-                        padding: EdgeInsets.only(top: 20),
-                        child: Text("Sunday",style: TextStyle(color: Colors.grey),)),
-                  ),
 
 
                 ],

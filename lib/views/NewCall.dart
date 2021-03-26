@@ -30,11 +30,8 @@ class _NewCallState extends State<NewCall> {
 
             });
           },
-          child: Icon(
-            Icons.people,
-            color: groupCall? Colors.black:Colors.grey,
-            size: 25,
-          ),
+          child: groupCall?Image.asset('assets/icons/newcalls/ClickedGroupBright.png',width: 20,)
+              :Image.asset('assets/icons/newcalls/GroupCallBright.png',width: 20,),
         ),
         centerTitle: true,
         actions: [
@@ -42,11 +39,7 @@ class _NewCallState extends State<NewCall> {
             onTap: (){
               Get.back();
             },
-            child: Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 25,
-            ),
+            child: Image.asset('assets/icons/newcalls/close.png',width: 20,height: 20,),
           )
         ],
       ),
@@ -95,7 +88,7 @@ class _NewCallState extends State<NewCall> {
               child: Stack(
                 children: [
                   ListView.separated(
-                      itemCount: 15,
+                      itemCount: 1,
                       separatorBuilder: (context,int index){
                         return SizedBox(height: 15,);
                       },
@@ -137,17 +130,10 @@ class _NewCallState extends State<NewCall> {
                             if(groupCall== false)
                               Row(
                                 children: [
-                                  Icon(
-                                    Icons.video_call,
-                                    color: Colors.black,
-                                    size: 25,
-                                  ),
+                                  Image.asset('assets/icons/newcalls/VideoCall.png',
+                                    width: 20,height: 20,),
                                   SizedBox(width: 10,),
-                                  Icon(
-                                    Icons.call,
-                                    color: Colors.black,
-                                    size: 25,
-                                  )
+                                  Image.asset('assets/icons/newcalls/PhoneCall.png',width: 20,),
                                 ],
                               )
                             else
@@ -198,7 +184,7 @@ class _NewCallState extends State<NewCall> {
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white),
                               ),
-                              Icon(Icons.call,color: Colors.white,)
+                              Image.asset('assets/icons/newcalls/StartPhone.png'),
                             ],
                           ),
                         ),
@@ -222,7 +208,7 @@ class _NewCallState extends State<NewCall> {
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white),
                               ),
-                              Icon(Icons.video_call,color: Colors.white,)
+                              Image.asset('assets/icons/newcalls/StartVideo.png'),
                             ],
                           ),
                         ),

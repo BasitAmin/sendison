@@ -32,10 +32,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
               indicatorColor: Colors.white,
               tabs: [
                 Tab(
-                  icon: Icon(Icons.call),
+                  icon: ImageIcon(AssetImage('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png')),
                 ),
                 Tab(
-                  icon: Icon(Icons.send),
+                  icon: ImageIcon(AssetImage('assets/icons/outside/Clicked New Chat Send Icon.png'),
+                    ),
                 ),
                 Tab(
                   icon: Icon(Icons.settings),
