@@ -23,7 +23,10 @@ class _CallsState extends State<Calls> {
               Get.to(NewCall());
             },
             child: Image.asset('assets/icons/calls/Calls-Screen-New-Call-Icon.png',width: 20,),
-          )
+          ),
+          SizedBox(
+            width: 10,
+          ),
         ],
 
 

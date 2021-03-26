@@ -16,7 +16,7 @@ class _WelcomeState extends State<Welcome> {
         child: Container(
           width: Get.width,
           height: Get.height,
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.only(left: 15,right: 15,top: 40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,

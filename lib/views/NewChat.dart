@@ -30,8 +30,8 @@ class _NewChatState extends State<NewChat> {
 
             });
           },
-          child: groupChat?Image.asset('assets/icons/newcalls/ClickedGroupBright.png',width: 20,)
-              :Image.asset('assets/icons/newcalls/GroupCallBright.png',width: 20,),
+          child: groupChat?Image.asset('assets/icons/newcalls/ClickedGroupBright.png',scale: 3,)
+              :Image.asset('assets/icons/newcalls/GroupCallBright.png',scale: 3,),
         ),
         centerTitle: true,
         actions: [
@@ -40,7 +40,8 @@ class _NewChatState extends State<NewChat> {
               Get.back();
             },
             child: Image.asset('assets/icons/outside/Clicked New Chat Close Icon.png',width: 20,),
-          )
+          ),
+          SizedBox(width: 10,),
         ],
       ),
       body: Container(

@@ -54,6 +54,7 @@ flutter:
     - assets/icons/calls/
     - assets/icons/outside/
     - assets/icons/inside/
+    - assets/icons/facetime/
     - assets/icons/newcalls/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

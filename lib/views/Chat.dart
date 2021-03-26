@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/VoiceCall.dart';
 
 class Chat extends StatefulWidget {
   @override
@@ -146,12 +147,16 @@ class _ChatState extends State<Chat> {
             Get.back();
           },
             child: Image.asset('assets/icons/inside/InsideBack.png',
-              width: 10,)),
+              scale: 3,)),
         actions: [
-          Image.asset('assets/icons/inside/InsidePhone.png',width: 20,),
-          SizedBox(width: 5,),
+          InkWell(
+            onTap: (){
+              Get.to(VoiceCall());
+            },
+              child: Image.asset('assets/icons/inside/InsidePhone.png',width: 20,)),
+          SizedBox(width: 10,),
           Image.asset('assets/icons/inside/InsideVideo.png',width: 20,),
-          SizedBox(width: 5,),
+          SizedBox(width: 10,),
           Container(
             child: CircleAvatar(
               radius: 15.0,
@@ -160,6 +165,7 @@ class _ChatState extends State<Chat> {
               backgroundColor: Colors.transparent,
             ),
           ),
+          SizedBox(width: 10,),
         ],
       ),
       backgroundColor: Colors.white,
@@ -338,12 +344,12 @@ class _ChatState extends State<Chat> {
                       },
                       child: Container(
                         //width: 25,
-                        height: 25,
+                        height: 30,
                         decoration: BoxDecoration(
                           color: Colors.black,
                           shape: BoxShape.circle,
                         ),
-                        child: Image.asset('assets/icons/inside/InsideTop.png',width: 20,),),
+                        child: Image.asset('assets/icons/inside/InsideTop.png',scale: 4,),),
                     ),
                   ),
                   SizedBox(width: 5,),
@@ -394,7 +400,7 @@ class _ChatState extends State<Chat> {
                         color: Colors.grey.withOpacity(0.3),
                         shape: BoxShape.circle,
                       ),
-                      child: Image.asset('assets/icons/inside/InsideSend.png',width: 20,),),
+                      child: Image.asset('assets/icons/inside/InsideSend.png',scale: 4,),),
                   ),
 
                 ],

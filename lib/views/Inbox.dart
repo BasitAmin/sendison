@@ -24,8 +24,11 @@ class _InboxState extends State<Inbox> {
               Get.to(NewChat());
             },
             child: Image.asset('assets/icons/outside/Chat Screen Click New Chat Icon.png',
-              width: 20,height: 20,),
-          )
+              width: 20),
+          ),
+          SizedBox(
+            width: 10,
+          ),
         ],
 
 

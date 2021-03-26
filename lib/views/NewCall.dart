@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:group_radio_button/group_radio_button.dart';
+import 'package:sendison/views/VoiceCall.dart';
 class NewCall extends StatefulWidget {
   @override
   _NewCallState createState() => _NewCallState();
@@ -30,8 +31,10 @@ class _NewCallState extends State<NewCall> {
 
             });
           },
-          child: groupCall?Image.asset('assets/icons/newcalls/ClickedGroupBright.png',width: 20,)
-              :Image.asset('assets/icons/newcalls/GroupCallBright.png',width: 20,),
+          child:
+          groupCall?
+               Image.asset('assets/icons/newcalls/ClickedGroupBright.png',scale: 3,)
+              :Image.asset('assets/icons/newcalls/GroupCallBright.png',scale: 3,),
         ),
         centerTitle: true,
         actions: [
@@ -39,8 +42,11 @@ class _NewCallState extends State<NewCall> {
             onTap: (){
               Get.back();
             },
-            child: Image.asset('assets/icons/newcalls/close.png',width: 20,height: 20,),
-          )
+            child: Image.asset('assets/icons/newcalls/close.png',width: 20),
+          ),
+          SizedBox(
+            width: 10,
+          ),
         ],
       ),
       body: Container(
@@ -131,9 +137,9 @@ class _NewCallState extends State<NewCall> {
                               Row(
                                 children: [
                                   Image.asset('assets/icons/newcalls/VideoCall.png',
-                                    width: 20,height: 20,),
+                                    scale: 3,),
                                   SizedBox(width: 10,),
-                                  Image.asset('assets/icons/newcalls/PhoneCall.png',width: 20,),
+                                  Image.asset('assets/icons/newcalls/PhoneCall.png',scale: 3,),
                                 ],
                               )
                             else
@@ -168,7 +174,7 @@ class _NewCallState extends State<NewCall> {
                         MaterialButton(
                           minWidth: Get.width ,
                           onPressed: () {
-                            Get.to(NewCall());
+                            Get.to(VoiceCall());
                           },
                           color: Color(0xff0FBE6C),
                           height: 45,
@@ -184,7 +190,8 @@ class _NewCallState extends State<NewCall> {
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white),
                               ),
-                              Image.asset('assets/icons/newcalls/StartPhone.png'),
+                              SizedBox(width: 5,),
+                              Image.asset('assets/icons/newcalls/StartPhone.png',scale: 3,),
                             ],
                           ),
                         ),
@@ -208,7 +215,8 @@ class _NewCallState extends State<NewCall> {
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white),
                               ),
-                              Image.asset('assets/icons/newcalls/StartVideo.png'),
+                              SizedBox(width: 5,),
+                              Image.asset('assets/icons/newcalls/StartVideo.png',scale: 3,),
                             ],
                           ),
                         ),
