@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sendison/views/Calls.dart';
+import 'package:sendison/views/EditProfile.dart';
 import 'package:sendison/views/Inbox.dart';
 import 'package:sendison/views/Profile.dart';
 
@@ -21,7 +22,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           children: [
             Calls(),
             Inbox(),
-            Profile(),
+            EditProfile(),
           ],
         ),
           bottomNavigationBar: Container(
@@ -39,7 +40,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
                     ),
                 ),
                 Tab(
-                  icon: Icon(Icons.settings),
+                  child: Container(
+                    child: CircleAvatar(
+                      radius: 25.0,
+                      backgroundImage: NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                      backgroundColor: Colors.transparent,
+                    ),
+                  ),
+
                 ),
               ],
             ),

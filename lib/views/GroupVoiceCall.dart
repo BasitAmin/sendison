@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sendison/views/GroupVoiceCall.dart';
 
 
-class GroupCall extends StatelessWidget {
+class GroupVoiceCall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,56 +15,49 @@ class GroupCall extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            InkWell(
-              onTap: (){
-                Get.to(GroupVoiceCall());
-              },
-              child: Stack(
-                children: [
-                  Container(
-                    //3f3f3f
-                    height: Get.width/1.5,
-                    decoration: BoxDecoration(
+            Row(
+              children: [
+                Container(
+                  height: Get.width/2.3,
+                  decoration: BoxDecoration(
                       border: Border.all(
-                          color: Color(0xff3f3f3f),
+                          color: Colors.grey,
                           width: 10
                       ),
                       shape: BoxShape.circle,
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("assets/icons/facetime/VoiceCall.png")
+                      )
+                  ),
+                ),
+                Container(
+                  //3f3f3f
+                  height: Get.width/2.3,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Color(0xff3f3f3f),
+                        width: 10
                     ),
-                    child: Container(
-                      height: Get.width/1.5,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: Colors.grey,
-                              width: 10
-                          ),
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage("assets/icons/facetime/VoiceCall.png")
-                          )
-                      ),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Container(
+                    height: Get.width/2.3,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 10
+                        ),
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("assets/icons/facetime/VoiceCall.png")
+                        )
                     ),
                   ),
-                  Positioned(
-                    right: 100,
-                    top: 20,
-                    child: Container(
-                      width: 50,
-                      height: 30,
-                      padding: EdgeInsets.only(top: 5),
-                      decoration: BoxDecoration(
-                        color: Colors.pink,
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      child: Text('12',textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+
+              ],
             ),
             SizedBox(height: 20,),
             Text("Group Call",

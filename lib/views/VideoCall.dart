@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/StartVideoCall.dart';
 
 
 class VideoCall extends StatelessWidget {
@@ -68,31 +69,36 @@ class VideoCall extends StatelessWidget {
               ],
             ),
             //SizedBox(height: 50,),
-            Container(
-              //3f3f3f
-              margin: EdgeInsets.only(top: 50),
-              height: Get.width/2.1,
-              decoration: BoxDecoration(
-                border: Border.all(
-                    color: Color(0xff3f3f3f),
-                    width: 10
-                ),
-                shape: BoxShape.circle,
-              ),
+            InkWell(
+              onTap: (){
+                Get.to(StartVideoCall());
+              },
               child: Container(
+                //3f3f3f
+                margin: EdgeInsets.only(top: 50),
                 height: Get.width/2.1,
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                    border: Border.all(
-                        color: Colors.grey,
-                        width: 10
-                    ),
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        //fit: BoxFit.cover,
-                        image: AssetImage("assets/icons/facetime/VoiceCall.png"),
+                  border: Border.all(
+                      color: Color(0xff3f3f3f),
+                      width: 10
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: Container(
+                  height: Get.width/2.1,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                      border: Border.all(
+                          color: Colors.grey,
+                          width: 10
+                      ),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          //fit: BoxFit.cover,
+                          image: AssetImage("assets/icons/facetime/VoiceCall.png"),
 
-                    )
+                      )
+                  ),
                 ),
               ),
             ),

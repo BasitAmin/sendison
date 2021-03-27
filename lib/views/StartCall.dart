@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sendison/views/StartCall.dart';
 
 
-class VoiceCall extends StatelessWidget {
+class StartCall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,49 +15,57 @@ class VoiceCall extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            InkWell(
-              onTap: (){
-                Get.to(StartCall());
-              },
+            Container(
+              //3f3f3f
+              height: Get.width/1.5,
+              decoration: BoxDecoration(
+                border: Border.all(
+                    color: Colors.grey[600],
+                    width: 3,
+                ),
+                boxShadow: [
+                  BoxShadow(color: Colors.grey[300],blurRadius: 10,offset: Offset(-2,0,)),
+                ],
+                shape: BoxShape.circle,
+              ),
               child: Container(
-                //3f3f3f
                 height: Get.width/1.5,
                 decoration: BoxDecoration(
                     border: Border.all(
-                        color: Color(0xff3f3f3f),
-                        width: 10
+                        color: Colors.greenAccent,
+                        width: 4,
                     ),
                     shape: BoxShape.circle,
                 ),
                 child: Container(
-                  height: Get.width/1.5,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.grey,
-                      width: 10
-                    ),
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/icons/facetime/VoiceCall.png")
-                    )
+                  child: CircleAvatar(
+                    radius: 70.0,
+                    backgroundImage:
+                    NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                    backgroundColor: Colors.transparent,
                   ),
-          ),
+                ),
               ),
             ),
             SizedBox(height: 20,),
             Text("Noah Ruehli",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 36,
-              fontWeight: FontWeight.w600
-            ),),
-
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontWeight: FontWeight.w600
+              ),),
+            SizedBox(height: 20,),
+            Text("00:00:23",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontWeight: FontWeight.w400
+              ),),
           ],
         ),
       ),
       bottomNavigationBar: Container(
-       padding: EdgeInsets.only(left: 20,right: 20,bottom: 15),
+        padding: EdgeInsets.only(left: 20,right: 20,bottom: 15),
         child: MaterialButton(
           minWidth: Get.width-250,
           onPressed: () {
