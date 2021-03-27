@@ -7,7 +7,6 @@ class EndedVideoCall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Colors.black,
       body: Stack(
         children: [
@@ -85,6 +84,7 @@ class EndedVideoCall extends StatelessWidget {
               ],
             ),
           ),
+          Container(color: Colors.black.withOpacity(0.6),),
           Container(
             padding: EdgeInsets.only(top: 100),
             child: Column(mainAxisAlignment: MainAxisAlignment.center,

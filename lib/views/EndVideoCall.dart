@@ -86,6 +86,7 @@ class EndVideoCall extends StatelessWidget {
               ],
             ),
           ),
+          Container(color: Colors.black.withOpacity(0.6),),
           Container(
             padding: EdgeInsets.only(top: 100),
             child: Column(mainAxisAlignment: MainAxisAlignment.center,

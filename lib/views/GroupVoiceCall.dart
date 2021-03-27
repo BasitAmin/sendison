@@ -6,7 +6,6 @@ class GroupVoiceCall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Colors.black,
       body: Container(
         height: Get.height,
@@ -15,48 +14,83 @@ class GroupVoiceCall extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
+            Stack(
               children: [
-                Container(
-                  height: Get.width/2.3,
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          color: Colors.grey,
-                          width: 10
-                      ),
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage("assets/icons/facetime/VoiceCall.png")
-                      )
-                  ),
-                ),
-                Container(
-                  //3f3f3f
-                  height: Get.width/2.3,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: Color(0xff3f3f3f),
-                        width: 10
-                    ),
-                    shape: BoxShape.circle,
-                  ),
+                Positioned(
+                  left: 0.1,
                   child: Container(
                     height: Get.width/2.3,
+                    width: Get.width/2.3,
                     decoration: BoxDecoration(
+                      color: Colors.white,
                         border: Border.all(
-                            color: Colors.grey,
-                            width: 10
+                            color: Color(0xff3cbda8),
+                            width: 6
                         ),
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            fit: BoxFit.cover,
+                          //  fit: BoxFit.cover,
                             image: AssetImage("assets/icons/facetime/VoiceCall.png")
                         )
                     ),
                   ),
                 ),
-
+                Container(
+                  height: Get.width/2.3,
+                  width: Get.width,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                          color: Color(0xff3cbda8),
+                          width: 6
+                      ),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                         // fit: BoxFit.cover,
+                          image: AssetImage("assets/icons/facetime/VoiceCall.png")
+                      )
+                  ),
+                ),
+                Positioned(
+                  right: 0.1,
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: Get.width/2.3,
+                        width: Get.width/2.3,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                                color: Color(0xff3cbda8),
+                                width: 6
+                            ),
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              //  fit: BoxFit.cover,
+                                image: AssetImage("assets/icons/facetime/VoiceCall.png")
+                            )
+                        ),
+                      ),
+                      Positioned(
+                        right: 0.1,
+                        top: 0.1,
+                        child: Container(
+                          width: 50,
+                          height: 32,
+                          padding: EdgeInsets.only(top: 5),
+                          decoration: BoxDecoration(
+                              color: Colors.pink,
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(20)
+                          ),
+                          child: Text('12',textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 20,),
@@ -64,7 +98,14 @@ class GroupVoiceCall extends StatelessWidget {
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 36,
-                  fontWeight: FontWeight.bold
+                  fontWeight: FontWeight.w600
+              ),),
+            SizedBox(height: 20,),
+            Text("00:00:23",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontWeight: FontWeight.w600
               ),),
           ],
         ),
