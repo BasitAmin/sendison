@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sendison/views/Calls.dart';
 import 'package:sendison/views/Inbox.dart';
-import 'package:sendison/views/Settings.dart';
+import 'package:sendison/views/Profile.dart';
 
 class BottomNavBar extends StatefulWidget {
   @override
@@ -21,7 +21,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           children: [
             Calls(),
             Inbox(),
-            Settings(),
+            Profile(),
           ],
         ),
           bottomNavigationBar: Container(

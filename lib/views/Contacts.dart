@@ -4,7 +4,7 @@ import 'package:sendison/views/BottomNavBar.dart';
 import 'package:sendison/views/Calls.dart';
 import 'package:sendison/views/Group.dart';
 import 'package:sendison/views/Inbox.dart';
-import 'package:sendison/views/Settings.dart';
+import 'package:sendison/views/Profile.dart';
 
 class Contacts extends StatefulWidget {
   @override

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sendison/views/VoiceCall.dart';
+import 'package:sendison/views/Profile.dart';
+
 
 class Chat extends StatefulWidget {
   @override
@@ -158,11 +160,16 @@ class _ChatState extends State<Chat> {
           Image.asset('assets/icons/inside/InsideVideo.png',width: 20,),
           SizedBox(width: 10,),
           Container(
-            child: CircleAvatar(
-              radius: 15.0,
-              backgroundImage:
-              NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-              backgroundColor: Colors.transparent,
+            child: InkWell(
+              onTap: (){
+                Get.to(Profile());
+              },
+              child: CircleAvatar(
+                radius: 15.0,
+                backgroundImage:
+                NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                backgroundColor: Colors.transparent,
+              ),
             ),
           ),
           SizedBox(width: 10,),

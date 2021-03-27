@@ -90,7 +90,7 @@ class _WelcomeState extends State<Welcome> {
                 child: TextFormField(
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    prefixIcon: Icon(Icons.phone,color: Colors.black,size: 35,),
+                    prefixIcon: ImageIcon(AssetImage('assets/icons/newcalls/PhoneCall.png'),size: 10,),
                     hintText: '+11 12 13 14 15',
                     hintStyle: TextStyle(
                       color: Colors.grey.withOpacity(0.5),
