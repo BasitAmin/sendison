@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:group_radio_button/group_radio_button.dart';
+import 'package:sendison/views/GroupCall.dart';
+import 'package:sendison/views/VideoCall.dart';
 import 'package:sendison/views/VoiceCall.dart';
 class NewCall extends StatefulWidget {
   @override
@@ -136,10 +138,19 @@ class _NewCallState extends State<NewCall> {
                             if(groupCall== false)
                               Row(
                                 children: [
-                                  Image.asset('assets/icons/newcalls/VideoCall.png',
-                                    scale: 3,),
+                                  InkWell(
+                                    onTap: (){
+                                      Get.to(VideoCall());
+                                    },
+                                    child: Image.asset('assets/icons/newcalls/VideoCall.png',
+                                      scale: 3,),
+                                  ),
                                   SizedBox(width: 10,),
-                                  Image.asset('assets/icons/newcalls/PhoneCall.png',scale: 3,),
+                                  InkWell(
+                                    onTap: (){
+                                      Get.to(VoiceCall());
+                                    },
+                                      child: Image.asset('assets/icons/newcalls/PhoneCall.png',scale: 3,)),
                                 ],
                               )
                             else
@@ -174,7 +185,7 @@ class _NewCallState extends State<NewCall> {
                         MaterialButton(
                           minWidth: Get.width ,
                           onPressed: () {
-                            Get.to(VoiceCall());
+                            Get.to(GroupCall());
                           },
                           color: Color(0xff0FBE6C),
                           height: 45,
