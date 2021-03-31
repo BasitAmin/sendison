@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sendison/views/BlockProfile.dart';
@@ -83,13 +84,12 @@ class _EditProfileState extends State<EditProfile> {
                     ),
                     SizedBox(height: 30,),
 
-                    OutlinedButton(
+                    OutlineButton(
+                        shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(9.0)),
                       onPressed: (){
                         Get.to(Edit());
                       },
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(width: 2, color: Colors.grey[300]),
-                      ),
                       child: Text('Edit',style: TextStyle(
                           fontSize: 18,color: Colors.grey[300]),),
                     ),
