@@ -23,34 +23,32 @@ class _WelcomeState extends State<Welcome> {
             height: Get.height,
             padding: EdgeInsets.only(
                 top: Get.width/4,
-                left: 20,
-                right: 20,
-                bottom: Get.width/4),
+               // left: 20,
+               // right: 20,
+                bottom: Get.width/2.5),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Welcome',style: TextStyle(
-                          fontSize: 50,
-                        fontFamily: "NoirPro",
-                        fontWeight: FontWeight.w600
-                      ),),
-                      SizedBox(width: 20,),
-                      Image.asset('assets/images/LoginSignUpScreens/waving.png',
-                        scale: 4,
-                         ),
-                    ],
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Welcome',style: TextStyle(
+                        fontSize: 50,
+                      fontFamily: "NoirPro",
+                      fontWeight: FontWeight.w600
+                    ),),
+                    SizedBox(width: 20,),
+                    Image.asset('assets/images/LoginSignUpScreens/waving.png',
+                      scale: 4,
+                       ),
+                  ],
                 ),
                 Stack(
                   children: [
                     Container(
                       width: Get.width/1.9,
-                      height: Get.width/2,
+                      height: Get.width/1.8,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         //color: Colors.blue,
@@ -67,27 +65,26 @@ class _WelcomeState extends State<Welcome> {
                     Positioned(
                      // top: 150,
                       left: Get.width/10.8,
-                      bottom: -5,
+                      bottom: -2,
                       child: MaterialButton(
                         minWidth: Get.width/2.8,
                         onPressed: (){
                           Get.to(Welcome());
                         },
                         color: Color(0xff6830F7),
-                        height: 40,
+                        height: 45,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6) ),
                         child: Text('Choose',
                           style: TextStyle(
-                            fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
+                            fontSize: 20,fontWeight: FontWeight.w700,color: Colors.white),),
                       ),
                     ),
                   ],
                 ),
                 Container(
-                  width: Get.width/1.8,
-                  height: Get.width/10,
-                  alignment: Alignment.center,
+                  //alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(horizontal: Get.width/5),
                   child: TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10),
@@ -102,8 +99,7 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ),
                 Container(
-                  width: Get.width/1.5,
-                  height: Get.width/4,
+                  padding: EdgeInsets.symmetric(horizontal: Get.width/8),
                   child: TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10),

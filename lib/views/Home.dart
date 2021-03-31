@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
                     Get.to(Welcome());
                   },
                   color: Color(0xff0FBE6C),
-                  height: 45,
+                  height: 55,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6) ),
                   child: Text('Get Started',style: TextStyle(
