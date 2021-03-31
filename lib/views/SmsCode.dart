@@ -36,6 +36,7 @@ class _SmsCodeState extends State<SmsCode> {
               SizedBox(height: 50,),
               Container(
                 width: Get.width/1.5,
+                alignment: Alignment.center,
                 child: TextFormField(
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 20),
@@ -50,16 +51,16 @@ class _SmsCodeState extends State<SmsCode> {
               ),
               SizedBox(height: 100,),
               MaterialButton(
-                minWidth: Get.width/1.8,
+                minWidth: Get.width/1.6,
                 onPressed: (){
                   Get.to(Contacts());
                 },
                 color: Color(0xff0FBE6C),
-                height: 45,
+                height: 48,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6) ),
                 child: Text('Confirm',style: TextStyle(
-                    fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
+                    fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
               ),
             ],
           ),

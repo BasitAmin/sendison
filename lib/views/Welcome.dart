@@ -1,4 +1,8 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:sendison/views/SmsCode.dart';
 
@@ -26,33 +30,37 @@ class _WelcomeState extends State<Welcome> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Welcome',style: TextStyle(
-                        fontSize: 50,),),
+                        fontSize: 50,
+                      fontFamily: "NoirPro",
+                      fontWeight: FontWeight.w600
+                    ),),
                     SizedBox(width: 20,),
-                    Image.asset('assets/icons/loginandsignup/waving.png',
-                      fit: BoxFit.cover,
-                    width: 50,
-                    height: 50,),
+                    Image.asset('assets/images/LoginSignUpScreens/waving.png',
+                      width: 50,height: 50,
+                       ),
                   ],
                 ),
               ),
               Stack(
                 children: [
                   Container(
+                    width: 180,
+                    height: 180,
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      //color: Colors.blue,
                       shape: BoxShape.circle,
                       border: Border.all(width: 4,color: Color(0xff01AFF7)),
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/LoginSignUpScreens/Profile Image Placeholder Bright Mode.png'),
+                      )
                     ),
-                    child: CircleAvatar(
-                      radius: 80.0,
-                      backgroundImage:
-                      NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                      backgroundColor: Colors.transparent,
-                    ),
+                    // child: Image.asset('assets/images/LoginSignUpScreens/Profile Image Placeholder Bright Mode.png',
+                    // scale: 4,fit: BoxFit.cover,),
                   ),
                   Positioned(
-                    top: 130,
-                    left: 20,
+                    top: 150,
+                    left: 35,
                     bottom: 0,
                     child: MaterialButton(
                       minWidth: Get.width/3,
@@ -71,6 +79,7 @@ class _WelcomeState extends State<Welcome> {
               ),
               Container(
                 width: Get.width/1.8,
+                alignment: Alignment.center,
                 child: TextFormField(
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
@@ -78,7 +87,7 @@ class _WelcomeState extends State<Welcome> {
                     hintText: 'Full Name...',
                     hintStyle: TextStyle(
                       color: Colors.grey.withOpacity(0.5),
-                      fontSize: 35,
+                      fontSize: 30,
                       fontWeight: FontWeight.w600,
                     ),
                     enabledBorder: InputBorder.none,
@@ -101,16 +110,16 @@ class _WelcomeState extends State<Welcome> {
                 ),
               ),
               MaterialButton(
-                minWidth: Get.width/1.8,
+                  minWidth: Get.width/1.6,
                 onPressed: (){
                   Get.to(SmsCode());
                 },
                 color: Color(0xff0FBE6C),
-                height: 45,
+                height: 48,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6) ),
                 child: Text('Save',style: TextStyle(
-                    fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
+                    fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
               ),
             ],
           ),
