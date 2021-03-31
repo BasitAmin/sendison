@@ -13,15 +13,18 @@ class _EditProfileState extends State<EditProfile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 30),
+      padding: EdgeInsets.only(top: 8),
       child: Column(
         children: [
           Expanded(
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.white,
-                title: Text("Profile",style: TextStyle(
-                    fontSize: 28,fontWeight: FontWeight.w600,color: Colors.black),
+                title: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text("Profile",style: TextStyle(
+                      fontSize: 35,fontWeight: FontWeight.w600,color: Colors.black),
+                  ),
                 ),
                 bottomOpacity: 10,
                 //centerTitle: true,
@@ -32,7 +35,7 @@ class _EditProfileState extends State<EditProfile> {
                         Get.to(Settings());
                       },
                       child: Icon(Icons.settings,color: Colors.grey[300],)),
-                  SizedBox(width: 10,),
+                  SizedBox(width: 20,),
                 ],
               ),
               backgroundColor: Colors.white,
