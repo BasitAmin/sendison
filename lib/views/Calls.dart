@@ -10,15 +10,18 @@ class _CallsState extends State<Calls> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 30),
+      padding: EdgeInsets.only(top: 8),
       child: Column(
         children: [
           Expanded(
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.white,
-                title: Text("Calls",style: TextStyle(
-                    fontSize: 35,fontWeight: FontWeight.w600,color: Colors.black),
+                title: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text("Calls",style: TextStyle(
+                      fontSize: 35,fontWeight: FontWeight.w600,color: Colors.black),
+                  ),
                 ),
                 bottomOpacity: 10,
                 automaticallyImplyLeading: false,
@@ -30,7 +33,7 @@ class _CallsState extends State<Calls> {
                     child: Image.asset('assets/icons/calls/Calls-Screen-New-Call-Icon.png',width: 20,),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 20,
                   ),
                 ],
 
@@ -38,6 +41,7 @@ class _CallsState extends State<Calls> {
               ),
               backgroundColor: Colors.white,
               body: Container(
+                margin: EdgeInsets.only(top: 10),
                 height: Get.height,
                 width: Get.width,
                 padding: EdgeInsets.all(10),
@@ -45,8 +49,8 @@ class _CallsState extends State<Calls> {
                   children: [
                     Container(
                       height: 35,
+                      padding: EdgeInsets.only(left: 10,right: 10),
                       child: TextFormField(
-
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.only(top: 5),
                           isDense: true,
@@ -78,6 +82,7 @@ class _CallsState extends State<Calls> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 10,),
                     Expanded(
                       child: ListView(
                         shrinkWrap: true,

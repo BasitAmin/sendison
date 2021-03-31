@@ -8,6 +8,7 @@ void main(){
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       backgroundColor: Colors.white,
+
       fontFamily: "NoirPro"
     ),
     home: Home(),
