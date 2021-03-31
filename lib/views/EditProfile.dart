@@ -39,39 +39,17 @@ class _EditProfileState extends State<EditProfile> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Stack(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    shape: BoxShape.circle,
-                    border: Border.all(width: 4,color: Color(0xff01AFF7)),
-                  ),
-                  child: CircleAvatar(
-                    radius: 80.0,
-                    backgroundImage:
-                    NetworkImage('https://via.placeholder.com/150'),
-                    backgroundColor: Colors.transparent,
-                  ),
-                ),
-                Positioned(
-                  top: 130,
-                  left: 20,
-                  bottom: 0,
-                  child: MaterialButton(
-                    minWidth: Get.width/3,
-                    onPressed: (){
-                      //Get.to(Welcome());
-                    },
-                    color: Color(0xff6830F7),
-                    height: 15,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6) ),
-                    child: Text('Choose',style: TextStyle(
-                        fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
-                  ),
-                ),
-              ],
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(width: 4,color: Color(0xff01AFF7)),
+              ),
+              child: CircleAvatar(
+                radius: 80.0,
+                backgroundImage:
+                AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
+                backgroundColor: Colors.transparent,
+              ),
             ),
             SizedBox(height: 15,),
             Container(

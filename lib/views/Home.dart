@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
                   height: 45,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6) ),
-                  child: Text('Get Satrted',style: TextStyle(
+                  child: Text('Get Started',style: TextStyle(
                       fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
                 ),
               ),
