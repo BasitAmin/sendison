@@ -83,8 +83,9 @@ class _WelcomeState extends State<Welcome> {
                   ],
                 ),
                 Container(
-                  //alignment: Alignment.center,
-                  padding: EdgeInsets.symmetric(horizontal: Get.width/5),
+                  width: Get.width/1.9,
+                  height: Get.width/10,
+                  alignment: Alignment.center,
                   child: TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10),
@@ -98,6 +99,10 @@ class _WelcomeState extends State<Welcome> {
                     ),
                   ),
                 ),
+
+
+
+
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: Get.width/8),
                   child: TextFormField(
