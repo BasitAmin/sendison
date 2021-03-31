@@ -66,8 +66,8 @@ class _SmsCodeState extends State<SmsCode> {
                   onPressed: (){
                     Get.to(Contacts());
                   },
-                  minSize: 50,
-                  padding: EdgeInsets.only(left: Get.width/4,right: Get.width/4),
+                  minSize: 55,
+                  padding: EdgeInsets.only(left: Get.width/5,right: Get.width/5),
                   color: Color(0xff0FBE6C),
                   child: Text('Confirm',style: TextStyle(
                       fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
