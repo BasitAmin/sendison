@@ -22,7 +22,7 @@ class _WelcomeState extends State<Welcome> {
             width: Get.width,
             height: Get.height,
             padding: EdgeInsets.only(
-                top: 60,
+                top: Get.width/4,
                 left: 20,
                 right: 20,
                 bottom: Get.width/4),
@@ -55,7 +55,7 @@ class _WelcomeState extends State<Welcome> {
                       decoration: BoxDecoration(
                         //color: Colors.blue,
                         shape: BoxShape.circle,
-                        border: Border.all(width: 4,color: Color(0xff01AFF7)),
+                        border: Border.all(width: 6,color: Color(0xff01AFF7)),
                         image: DecorationImage(
                           image: AssetImage('assets/images/LoginSignUpScreens/Profile Image Placeholder Bright Mode.png'),
 
@@ -65,19 +65,20 @@ class _WelcomeState extends State<Welcome> {
                       // scale: 4,fit: BoxFit.cover,),
                     ),
                     Positioned(
-                      top: 150,
-                      left: 35,
-                      bottom: 0,
+                     // top: 150,
+                      left: Get.width/10.8,
+                      bottom: -5,
                       child: MaterialButton(
-                        minWidth: Get.width/3,
+                        minWidth: Get.width/2.8,
                         onPressed: (){
                           Get.to(Welcome());
                         },
                         color: Color(0xff6830F7),
-                        height: 20,
+                        height: 40,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6) ),
-                        child: Text('Choose',style: TextStyle(
+                        child: Text('Choose',
+                          style: TextStyle(
                             fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
                       ),
                     ),
@@ -116,20 +117,16 @@ class _WelcomeState extends State<Welcome> {
                     ),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(left: 40,right: 40),
-                  child: MaterialButton(
-                      minWidth: Get.width,
-                    onPressed: (){
-                      Get.to(SmsCode());
-                    },
-                    color: Color(0xff0FBE6C),
-                    height: 45,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6) ),
-                    child: Text('Save',style: TextStyle(
-                        fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
-                  ),
+                CupertinoButton(
+                  onPressed: (){
+                    Get.to(SmsCode());
+                  },
+                   minSize: 55,
+                  padding: EdgeInsets.only(left: Get.width/3.5,right: Get.width/3.5),
+                  color: Color(0xff0FBE6C),
+                  child: Text('Save',style: TextStyle(
+                      fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
+
                 ),
               ],
             ),

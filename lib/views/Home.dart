@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   width: Get.width/2,
                   height: Get.width/2.3,
-                  padding: EdgeInsets.only(top:10),
+                  padding: EdgeInsets.only(top:20),
                   alignment: Alignment.topCenter,
                   decoration: BoxDecoration(
                     color: Colors.black,
