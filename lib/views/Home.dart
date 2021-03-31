@@ -16,7 +16,11 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Container(
-          padding: EdgeInsets.only(top: 60,left: 20,right: 20,bottom: 90),
+          padding: EdgeInsets.only(
+              top: 60,
+              left: 20,
+              right: 20,
+              bottom: Get.width/4),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -26,7 +30,7 @@ class _HomeState extends State<Home> {
                 //width: Get.width/2,
                 ),
               ),
-             // SizedBox(height: 25,),
+
               Container(
                  //width: Get.width/2.2,
                  //height: Get.height/2.2,
@@ -53,7 +57,7 @@ class _HomeState extends State<Home> {
                   //   ),
                 ),
               ),
-             // SizedBox(height: 25,),
+
               Container(
                 padding: EdgeInsets.only(left: 5,right: 5),
                 child: Text('Privacy Is The One And Only Focus We Have!',
@@ -66,7 +70,7 @@ class _HomeState extends State<Home> {
                     fontFamily: "NoirPro",
                 ),),
               ),
-              //SizedBox(height: 25,),
+
               Container(
                 padding: EdgeInsets.only(left: 40,right: 40),
                 child: MaterialButton(
