@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendison/views/Contacts.dart';
 import 'package:sendison/views/SmsCode.dart';
 
 class Edit extends StatefulWidget {
@@ -31,7 +33,12 @@ class _EditState extends State<Edit> {
         child: Container(
           width: Get.width,
           height: Get.height,
-          padding: EdgeInsets.only(left: 15,right: 15,top: 40),
+          padding: EdgeInsets.only(
+              top: 30,
+              left: 20,
+              right: 20,
+              bottom: Get.width/2
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,29 +46,31 @@ class _EditState extends State<Edit> {
               Stack(
                 children: [
                   Container(
+                    width: Get.width/1.9,
+                    height: Get.width/1.8,
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: Colors.blue,
-                      shape: BoxShape.circle,
-                      border: Border.all(width: 4,color: Color(0xff01AFF7)),
+                      //color: Colors.blue,
+                        shape: BoxShape.circle,
+                        border: Border.all(width: 6,color: Color(0xff01AFF7)),
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
+
+                        )
                     ),
-                    child: CircleAvatar(
-                      radius: 80.0,
-                      backgroundImage:
-                      NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                      backgroundColor: Colors.transparent,
-                    ),
+                    // child: Image.asset('assets/images/LoginSignUpScreens/Profile Image Placeholder Bright Mode.png',
+                    // scale: 4,fit: BoxFit.cover,),
                   ),
                   Positioned(
-                    top: 130,
-                    left: 20,
-                    bottom: 0,
+                    left: Get.width/9,
+                    bottom: -2,
                     child: MaterialButton(
                       minWidth: Get.width/3,
                       onPressed: (){
                         //Get.to(Welcome());
                       },
                       color: Color(0xff6830F7),
-                      height: 20,
+                      height: 40,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6) ),
                       child: Text('Choose',style: TextStyle(
@@ -105,18 +114,16 @@ class _EditState extends State<Edit> {
                 ),
               ),
               SizedBox(height: 30,),
-
-              MaterialButton(
-                minWidth: Get.width/1.7,
+              CupertinoButton(
                 onPressed: (){
-                  //Get.to(SmsCode());
+
                 },
+                minSize: 55,
+                padding: EdgeInsets.only(left: Get.width/5,right: Get.width/5),
                 color: Color(0xff0FBE6C),
-                height: 45,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6) ),
                 child: Text('Save',style: TextStyle(
-                    fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),),
+                    fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
+
               ),
 
             ],
