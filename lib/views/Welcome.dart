@@ -21,10 +21,14 @@ class _WelcomeState extends State<Welcome> {
           child: Container(
             width: Get.width,
             height: Get.height,
-            padding: EdgeInsets.only(left: 15,right: 15,top: 40),
+            padding: EdgeInsets.only(
+                top: 60,
+                left: 20,
+                right: 20,
+                bottom: Get.width/4),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   child: Row(
@@ -45,8 +49,8 @@ class _WelcomeState extends State<Welcome> {
                 Stack(
                   children: [
                     Container(
-                      width: 180,
-                      height: 180,
+                      width: Get.width/1.9,
+                      height: Get.width/2,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         //color: Colors.blue,
@@ -54,6 +58,7 @@ class _WelcomeState extends State<Welcome> {
                         border: Border.all(width: 4,color: Color(0xff01AFF7)),
                         image: DecorationImage(
                           image: AssetImage('assets/images/LoginSignUpScreens/Profile Image Placeholder Bright Mode.png'),
+
                         )
                       ),
                       // child: Image.asset('assets/images/LoginSignUpScreens/Profile Image Placeholder Bright Mode.png',
@@ -80,15 +85,15 @@ class _WelcomeState extends State<Welcome> {
                 ),
                 Container(
                   width: Get.width/1.8,
+                  height: Get.width/10,
                   alignment: Alignment.center,
                   child: TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10),
-
                       hintText: 'Full Name...',
                       hintStyle: TextStyle(
                         color: Colors.grey.withOpacity(0.5),
-                        fontSize: 30,
+                        fontSize: 32,
                         fontWeight: FontWeight.w600,
                       ),
                       enabledBorder: InputBorder.none,
@@ -97,6 +102,7 @@ class _WelcomeState extends State<Welcome> {
                 ),
                 Container(
                   width: Get.width/1.5,
+                  height: Get.width/4,
                   child: TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10),
@@ -110,17 +116,20 @@ class _WelcomeState extends State<Welcome> {
                     ),
                   ),
                 ),
-                MaterialButton(
-                    minWidth: Get.width/1.6,
-                  onPressed: (){
-                    Get.to(SmsCode());
-                  },
-                  color: Color(0xff0FBE6C),
-                  height: 48,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6) ),
-                  child: Text('Save',style: TextStyle(
-                      fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
+                Container(
+                  padding: EdgeInsets.only(left: 40,right: 40),
+                  child: MaterialButton(
+                      minWidth: Get.width,
+                    onPressed: (){
+                      Get.to(SmsCode());
+                    },
+                    color: Color(0xff0FBE6C),
+                    height: 45,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6) ),
+                    child: Text('Save',style: TextStyle(
+                        fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
+                  ),
                 ),
               ],
             ),

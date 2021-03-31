@@ -11,58 +11,73 @@ class SmsCode extends StatefulWidget {
 class _SmsCodeState extends State<SmsCode> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Container(
-          width: Get.width,
-          height: Get.height,
-          padding: EdgeInsets.all(10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                child: Text('SMS Code',style: TextStyle(
-                  fontSize: 50,fontWeight: FontWeight.w600),),
-              ),
-              SizedBox(height: 25,),
-              Container(
-                child: Text('+1 123 756 7890',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w600),),
-              ),
-              SizedBox(height: 50,),
-              Container(
-                width: Get.width/1.5,
-                alignment: Alignment.center,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 20),
-                    hintText: '1-2-3-4',
-                    hintStyle: TextStyle(
-                      color: Colors.grey.withOpacity(0.5),
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Container(
+            width: Get.width,
+            height: Get.height,
+            padding: EdgeInsets.only(
+                top: Get.width/2.9,
+                left: 20,
+                right: 20,
+                bottom: Get.width/2),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: Get.width/6,
+                  child: Text('SMS Code',style: TextStyle(
+                    fontSize: 50,fontWeight: FontWeight.w600),),
+                ),
+
+                Container(
+                  width: Get.width,
+                  height: Get.width/6,
+                  padding: EdgeInsets.only(left: 25,right: 25),
+                  child: Text('+1 123 456 7890',
+                    //textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 32,
+                        fontFamily: "NoirPro",
+                        fontWeight: FontWeight.w600),),
+                ),
+
+                Container(
+                  width: Get.width/2.3,
+                  height: Get.width/4,
+                  padding: EdgeInsets.only(left: 5,right: 5),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 10),
+                      hintText: '1-2-3-4',
+                      hintStyle: TextStyle(
+                        color: Colors.grey.withOpacity(0.5),
+                        fontSize: 38,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 100,),
-              MaterialButton(
-                minWidth: Get.width/1.6,
-                onPressed: (){
-                  Get.to(Contacts());
-                },
-                color: Color(0xff0FBE6C),
-                height: 48,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6) ),
-                child: Text('Confirm',style: TextStyle(
-                    fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
-              ),
-            ],
+
+                Container(
+                  padding: EdgeInsets.only(left: 40,right: 40),
+                  child: MaterialButton(
+                    minWidth: Get.width,
+                    onPressed: (){
+                      Get.to(Contacts());
+                    },
+                    color: Color(0xff0FBE6C),
+                    height: 45,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6) ),
+                    child: Text('Confirm',style: TextStyle(
+                        fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
