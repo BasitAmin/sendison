@@ -19,62 +19,59 @@ class _SmsCodeState extends State<SmsCode> {
             width: Get.width,
             height: Get.height,
             padding: EdgeInsets.only(
-                top: Get.width/2.9,
+                top: Get.width/2.5,
                 left: 20,
                 right: 20,
                 bottom: Get.width/2),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  height: Get.width/6,
-                  child: Text('SMS Code',style: TextStyle(
-                    fontSize: 50,fontWeight: FontWeight.w600),),
+                Text('SMS Code',style: TextStyle(
+                  fontSize: 50,fontWeight: FontWeight.w600),),
+                SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('+1 123 456 7890',
+                      //textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontFamily: "NoirPro",
+                          fontWeight: FontWeight.w600),),
+                  ],
                 ),
-
-                Container(
-                  width: Get.width,
+                SizedBox(
                   height: Get.width/6,
-                  padding: EdgeInsets.only(left: 25,right: 25),
-                  child: Text('+1 123 456 7890',
-                    //textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 32,
-                        fontFamily: "NoirPro",
-                        fontWeight: FontWeight.w600),),
                 ),
-
                 Container(
-                  width: Get.width/2.3,
+                  width: Get.width/1.8,
                   height: Get.width/4,
                   padding: EdgeInsets.only(left: 5,right: 5),
                   child: TextFormField(
+                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 10),
                       hintText: '1-2-3-4',
                       hintStyle: TextStyle(
                         color: Colors.grey.withOpacity(0.5),
-                        fontSize: 38,
+                        fontSize: 45,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: Get.width/6,
+                ),
+                CupertinoButton(
+                  onPressed: (){
+                    Get.to(Contacts());
+                  },
+                  minSize: 50,
+                  padding: EdgeInsets.only(left: Get.width/4,right: Get.width/4),
+                  color: Color(0xff0FBE6C),
+                  child: Text('Confirm',style: TextStyle(
+                      fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
 
-                Container(
-                  padding: EdgeInsets.only(left: 40,right: 40),
-                  child: MaterialButton(
-                    minWidth: Get.width,
-                    onPressed: (){
-                      Get.to(Contacts());
-                    },
-                    color: Color(0xff0FBE6C),
-                    height: 45,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6) ),
-                    child: Text('Confirm',style: TextStyle(
-                        fontSize: 22,fontWeight: FontWeight.w600,color: Colors.white),),
-                  ),
                 ),
               ],
             ),
