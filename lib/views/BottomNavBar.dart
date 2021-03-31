@@ -26,8 +26,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ],
         ),
           bottomNavigationBar: Container(
-            padding: EdgeInsets.only(left: 60, right: 60),
+            padding: EdgeInsets.only(left: 60, right: 60,top: 15,bottom: 20),
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                topRight: Radius.circular(30)
+              ),
               color: Colors.white,
                 boxShadow: [
                   BoxShadow(
@@ -43,17 +47,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
               indicatorColor: Colors.white,
               tabs: [
                 Tab(
-                  icon: ImageIcon(AssetImage('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png')),
+                  icon: ImageIcon(AssetImage('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png'),
+                  size: 30,),
                 ),
                 Tab(
-                  icon: ImageIcon(AssetImage('assets/icons/outside/Clicked New Chat Send Icon.png'),
+                  icon: ImageIcon(AssetImage('assets/icons/outside/Clicked New Chat Send Icon.png',),
+                    size: 30,
                     ),
                 ),
                 Tab(
                   child: Container(
                     child: CircleAvatar(
                       radius: 25.0,
-                      backgroundImage: NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                      backgroundImage: AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                       backgroundColor: Colors.transparent,
                     ),
                   ),
