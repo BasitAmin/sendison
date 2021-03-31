@@ -34,6 +34,7 @@ class _InboxState extends State<Inbox> {
 
 
       ),
+      backgroundColor: Colors.white,
       body: Container(
         height: Get.height,
         width: Get.width,

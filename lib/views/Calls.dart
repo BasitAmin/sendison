@@ -31,6 +31,7 @@ class _CallsState extends State<Calls> {
 
 
       ),
+      backgroundColor: Colors.white,
       body: Container(
         height: Get.height,
         width: Get.width,

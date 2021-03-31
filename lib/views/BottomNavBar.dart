@@ -27,6 +27,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
           bottomNavigationBar: Container(
             padding: EdgeInsets.only(left: 60, right: 60),
+            decoration: BoxDecoration(
+              color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(-2, 0),
+                    blurRadius: 6,
+                    color: Colors.black.withOpacity(0.16),
+                  )
+                ]
+            ),
             child: TabBar(
               labelColor: Colors.black,
               unselectedLabelColor: Colors.grey,
