@@ -102,9 +102,9 @@ class _NewChatState extends State<NewChat> {
                                 children: [
                                   Container(
                                     child: CircleAvatar(
-                                      radius: 18.0,
+                                      radius: 22.0,
                                       backgroundImage:
-                                      NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                                      AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                                       backgroundColor: Colors.transparent,
                                     ),
                                   ),
@@ -112,11 +112,8 @@ class _NewChatState extends State<NewChat> {
                                     bottom: 0,
                                     right: 0,
                                     child: Container(
-                                      width: 10,
-                                      height: 10,
-                                      decoration: BoxDecoration(
-                                        color: Colors.green,
-                                        shape: BoxShape.circle,
+                                      child: Image.asset('assets/icons/outside/Chat Screen Online Icon.png',
+                                        scale: 3.5,
                                       ),
                                     ),
                                   ),

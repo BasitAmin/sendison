@@ -52,6 +52,8 @@ flutter:
   assets:
     - assets/images/LoginSignUpScreens/
     - assets/images/LoadingScreen/
+    - assets/images/Outside/
+    - assets/images/Profile Screens/Other Profile/
     - assets/icons/logos/
     - assets/icons/loginandsignup/
     - assets/icons/calls/

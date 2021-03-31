@@ -79,10 +79,14 @@ class _CallsState extends State<Calls> {
                 children: [
                   ListTile(
                     leading: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(width: 2,color: Color(0xff01AFF7))
+                      ),
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                        AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
@@ -115,7 +119,8 @@ class _CallsState extends State<Calls> {
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Image.asset('assets/icons/calls/Calls-Screen-Video-Call-Icon.png',width: 20,),
+                          child: Image.asset('assets/icons/calls/Calls-Screen-Video-Call-Icon.png',
+                            scale: 8,),
                       ),
                     ],),
                     trailing:Container(
@@ -124,10 +129,14 @@ class _CallsState extends State<Calls> {
                   ),
                   ListTile(
                     leading: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(width: 2,color: Color(0xff01AFF7))
+                      ),
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                        AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
@@ -160,7 +169,8 @@ class _CallsState extends State<Calls> {
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Image.asset('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png',width: 20,),
+                          child: Image.asset('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png',
+                              scale: 8,),
                       ),
                     ],),
                     trailing:Container(
@@ -169,10 +179,14 @@ class _CallsState extends State<Calls> {
                   ),
                   ListTile(
                     leading: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(width: 2,color: Color(0xff01AFF7))
+                      ),
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                        AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
@@ -189,7 +203,8 @@ class _CallsState extends State<Calls> {
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Image.asset('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png',width: 20,),
+                          child: Image.asset('assets/icons/calls/Calls-Screen-Phone-Call-Icon.png',
+                            scale: 8,),
                       ),
                     ],),
                     trailing:Container(

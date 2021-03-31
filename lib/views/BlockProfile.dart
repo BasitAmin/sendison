@@ -7,7 +7,6 @@ class BlockProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Colors.black,
       body: Container(
         height: Get.height,
@@ -17,7 +16,7 @@ class BlockProfile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: Get.width/1.5,
+              height: Get.width/2,
               decoration: BoxDecoration(
                 color: Colors.white,
                   border: Border.all(
@@ -35,8 +34,8 @@ class BlockProfile extends StatelessWidget {
             Text("Block Profile?".toUpperCase(),
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 36,
-                  fontWeight: FontWeight.w400
+                  fontSize: 34,
+                  fontWeight: FontWeight.w600
               ),),
           ],
         ),
@@ -51,7 +50,7 @@ class BlockProfile extends StatelessWidget {
               onPressed: () {
                 Get.to(Blocked());
               },
-              color: Colors.red,
+              color: Color(0xffFF2D55),
               height: 45,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6)),

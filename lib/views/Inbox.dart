@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:sendison/views/Chat.dart';
 import 'package:sendison/views/NewChat.dart';
@@ -84,45 +85,13 @@ class _InboxState extends State<Inbox> {
                       Get.to(Chat());
                     },
                     leading: Container(
-                      child: CircleAvatar(
-                        radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
-                        backgroundColor: Colors.transparent,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(width: 2,color: Color(0xff01AFF7))
                       ),
-                    ),
-                    title: Text("Naah Ruehli",style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),),
-                    subtitle: Text("hi how are you?"),
-                    trailing: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 14,
-                          height: 14,
-                          decoration: BoxDecoration(
-                            color: Colors.pink,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Text("2",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600),),
-                        ),
-                        Container(
-                          child: Text("12:30"),
-                        ),
-                      ],
-                    ),
-                  ),ListTile(
-                    leading: Container(
                       child: CircleAvatar(
                         radius: 25.0,
-                        backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                        backgroundImage: AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
@@ -155,10 +124,54 @@ class _InboxState extends State<Inbox> {
                   ),
                   ListTile(
                     leading: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(width: 2,color: Color(0xff01AFF7))
+                      ),
                       child: CircleAvatar(
                         radius: 25.0,
                         backgroundImage:
-                        NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                        AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
+                        backgroundColor: Colors.transparent,
+                      ),
+                    ),
+                    title: Text("Naah Ruehli",style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                    ),),
+                    subtitle: Text("hi how are you?"),
+                    trailing: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 14,
+                          height: 14,
+                          decoration: BoxDecoration(
+                            color: Colors.pink,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Text("2",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600),),
+                        ),
+                        Container(
+                          child: Text("12:30"),
+                        ),
+                      ],
+                    ),
+                  ),
+                  ListTile(
+                    leading: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(width: 2,color: Color(0xff01AFF7))
+                      ),
+                      child: CircleAvatar(
+                        radius: 25.0,
+                        backgroundImage:
+                        AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
@@ -193,10 +206,14 @@ class _InboxState extends State<Inbox> {
                     leading: Stack(
                       children: [
                         Container(
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(width: 2,color: Color(0xff01AFF7))
+                          ),
                           child: CircleAvatar(
                             radius: 25.0,
                             backgroundImage:
-                            NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                            AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                             backgroundColor: Colors.transparent,
                           ),
                         ),
@@ -204,11 +221,9 @@ class _InboxState extends State<Inbox> {
                           bottom: 0,
                           right: 0,
                           child: Container(
-                            width: 14,
-                            height: 14,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
+
+                            child: Image.asset('assets/icons/outside/Chat Screen Online Icon.png',
+                              scale: 3.5,
                             ),
                           ),
                         ),
@@ -226,7 +241,8 @@ class _InboxState extends State<Inbox> {
                       SizedBox(width: 2,),
                       Container(
 
-                          child: Image.asset('assets/icons/outside/Chat Screen Phone Call Icon.png',width: 20,),
+                          child: Image.asset('assets/icons/outside/Chat Screen Phone Call Icon.png',
+                            scale: 3,),
                       ),
                     ],),
                     trailing: Column(

@@ -134,11 +134,8 @@ class _ChatState extends State<Chat> {
             ),
             SizedBox(width: 5,),
             Container(
-              width: 10,
-              height: 10,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.circle,
+              child: Image.asset('assets/icons/inside/Inside Chat Online Icon Bright Mode.png',
+                scale: 3.5,
               ),
             ),
           ],
@@ -167,7 +164,7 @@ class _ChatState extends State<Chat> {
               child: CircleAvatar(
                 radius: 15.0,
                 backgroundImage:
-                NetworkImage('https://variety.com/wp-content/uploads/2020/12/tom-cruise.jpg'),
+                AssetImage('assets/images/LoginSignUpScreens/Connect Phone Number Filled Out.png'),
                 backgroundColor: Colors.transparent,
               ),
             ),
